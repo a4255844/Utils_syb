@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>测试各种遍历数组的效率</title>
 </head>
+
 <body>
   <script>
     /* 
@@ -16,7 +18,7 @@
       arr.push(1)
     }
 
-    // for..in
+    // for..in  //查找原型链
     console.time()
     for (const key in arr) {
       let element = arr[key];
@@ -37,7 +39,7 @@
     })
     console.timeEnd()
 
-    // keys() + forEach
+    // keys() + forEach  //需要遍历两次
     console.time()
     Object.keys(arr).forEach(index => {
       let element32 = arr[index]
@@ -50,11 +52,11 @@
     console.time()
     const length = arr.length
     let index = 0
-    while(index++ < length) {
+    while (index++ < length) {
       let element4 = arr[index]
     }
     console.timeEnd()
-
   </script>
 </body>
+
 </html>

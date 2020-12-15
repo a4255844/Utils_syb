@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>自定义new与instanceof工具函数</title>
 </head>
+
 <body>
   <script>
     /* 
@@ -18,12 +20,12 @@
         实现: Type的原型对象是否是obj的原型链上的某个对象, 如果是返回tru, 否则返回false
     */
   </script>
-  <script src="../dist/atguigu-utils.js"></script>
+  <script src="../dist/190719-utils.js"></script>
   <script>
     function Person(name, age) {
       this.name = name
       this.age = age
-      return {}
+      // return {}
       // return []
       // return function (){}
       // return 1
@@ -35,7 +37,6 @@
 
     const p2 = aUtils.newInstance(Person, 'Jack', 13)
     console.log(p2, p2.constructor)
-
   </script>
   <script>
     console.log(aUtils.myInstanceOf(p, Object))
@@ -44,4 +45,5 @@
     console.log(aUtils.myInstanceOf(p, String), aUtils.myInstanceOf(p, Function))
   </script>
 </body>
+
 </html>

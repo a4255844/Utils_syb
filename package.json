@@ -1,6 +1,6 @@
 {
   "name": "190719_utils_syb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "尚硅谷大前端自定义工具函数库",
   "keywords": [
     "atguigu",
@@ -12,9 +12,9 @@
     "axios"
   ],
   "main": "dist/190719-utils.js",
-  "author": "YOUR NAME <YOU@EXAMPLE.COM>",
+  "author": "YOUR NAME <601520117@qq.com>",
   "license": "MIT",
-  "repository": "",
+  "repository": "https://github.com/a4255844/190719_Utils_syb",
   "scripts": {
     "bulid": "webpack --watch",
     "dev": "webpack-dev-server"
