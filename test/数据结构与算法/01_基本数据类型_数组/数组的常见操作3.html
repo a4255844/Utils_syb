@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    相关API操作
+       静态方法
+       更新的方法
+       遍历相关的声明式方法
+       其他方法
+    */
+    /* 
+    遍历相关的声明式方法
+    forEach()
+    find()
+    findIndex()
+    filter()
+    map()
+    reduce()
+    some()
+    every()
+    slice()
+    */
+    /* 
+    需要：
+         1.输出所有奇数元素值
+         2.找到一个值为奇数且下标为奇数的元素
+         3.撞到一个值为奇数且下标为奇数的元素下标
+         4.找到所有值为奇书且下标为奇数的元素
+         5.得到一个元素值都大于10的数组
+         6.找到所有值为奇数且下标为奇数的元素值的和
+         7.判断数组中是否包含值为奇数且下标为奇数的元素
+         8.判断数组中是否所有元素都满足值为奇数且下标为奇数
+         9.得到下标从2到5的所有元素的数组
+    */
+    const arr = [3, 1, 14, 9, 7, 6]
+    //  1.输出所有奇数元素值
+    arr.forEach(item => {
+      if (item % 2 === 1) {
+        console.log(item);
+      }
+    })
+    // 2.找到一个值为奇数且下标为奇数的元素
+    console.log(arr.find((item, index) => item % 2 === 1 && index % 2 === 1));
+    // 3.撞到一个值为奇数且下标为奇数的元素下标
+    console.log(arr.findIndex((item, index) => item % 2 === 1 && index % 2 === 1));
+    // 4.找到所有值为奇书且下标为奇数的元素
+    console.log(arr.filter((item, index) => item % 2 === 1 && index % 2 === 1));
+    // 5.得到一个元素值都大于10的数组
+    console.log(arr.filter(item => item > 10));
+    // 6.找到所有值为奇数且下标为奇数的元素值的和
+    console.log(arr.reduce((pre, item, index) => {
+      if (item % 2 === 1 && index % 2 === 1) {
+        pre = pre + item
+      }
+      return pre
+    }, 0));
+    // 7.判断数组中是否包含值为奇数且下标为奇数的元素
+    console.log(arr.some((item, index) => item % 2 === 1 && index % 2 === 1));
+    // 8.判断数组中是否所有元素都满足值为奇数且下标为奇数
+    console.log(arr.every((item, index) => item % 2 === 1 && index % 2 === 1));
+    // 9.得到下标从2到5的所有元素的数组
+    console.log(arr.slice(2, 5));
+  </script>
+</body>
+
+</html>

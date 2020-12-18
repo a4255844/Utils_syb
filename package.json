@@ -24,5 +24,7 @@
     "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.10.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "atguigu-utils": "^1.2.2"
+  }
 }

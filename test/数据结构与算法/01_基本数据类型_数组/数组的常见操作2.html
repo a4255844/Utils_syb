@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+    更新的方法
+        push()
+        pop()
+        unshift()
+        shift()
+        sort()
+        reverse()
+        splice()
+    */
+    /* 
+    需求：
+         1.在素组的最后添加6
+         2.在数组的最后一次添加8和9
+         3.在数组的最后添加包含8和9的数组
+         4.删除数组的最后一个元素
+         5.在数组的最前面添加2
+         6.在数组的最前面一次添加4和3(注：3在前，4在后)
+         7.删除数组的第一个元素
+         8.对数组进行按数值降序排序
+         9.对数组进行倒序排序
+         10.删除第三个元素
+         11.将第三个元素替换为10(不能直接赋值)
+         12.将11插入为数组的第3个元素
+    */
+    const arr = [3, 1, 14, 9, 7, 6]
+    arr.push(6)
+    arr.push(8, 9)
+    arr.push([8, 9])
+    console.log(arr.pop());
+    arr.unshift(2)
+    arr.unshift(4, 3)
+    console.log(arr.shift());
+    console.log(arr.sort((item1, item2) => item2 - item1)); //原数组也排序了
+    // console.log(arr.reverse());
+    arr.splice(2, 1)
+    arr.splice(2, 1, 10)
+    arr.splice(2, 0, 11)
+
+    console.log(arr);
+  </script>
+</body>
+
+</html>
