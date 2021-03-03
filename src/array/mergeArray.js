@@ -5,6 +5,9 @@
 */
 export function mergeArray(array, ...arrays) {
   const result = [...array]
+  if (arrays.length === 0) {
+    return result
+  }
   arrays.forEach(itemArr => {
     itemArr.forEach(item => {
       if (result.indexOf(item) === -1) result.push(item)

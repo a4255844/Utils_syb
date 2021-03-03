@@ -1,9 +1,8 @@
 {
-  "name": "190719_utils_syb",
+  "name": "syb_utils",
   "version": "1.0.1",
-  "description": "尚硅谷大前端自定义工具函数库",
+  "description": "前端自定义工具函数库",
   "keywords": [
-    "atguigu",
     "utils",
     "array",
     "object",
@@ -11,7 +10,7 @@
     "promise",
     "axios"
   ],
-  "main": "dist/190719-utils.js",
+  "main": "dist/sybUtils.js",
   "author": "YOUR NAME <601520117@qq.com>",
   "license": "MIT",
   "repository": "https://github.com/a4255844/190719_Utils_syb",
@@ -20,11 +19,13 @@
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
     "webpack": "4.41.5",
     "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.10.1"
   },
   "dependencies": {
-    "atguigu-utils": "^1.2.2"
+    "atguigu-utils": "^1.2.2",
+    "syb_utils": "^1.0.1"
   }
 }

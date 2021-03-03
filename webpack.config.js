@@ -1,5 +1,5 @@
 const path = require('path')
-const { util } = require('webpack')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   // 模式 决定打包的文件是否为压缩后的
   mode: 'development',
@@ -9,8 +9,8 @@ module.exports = {
   // 出口
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '190719-utils.js',
-    // filename: '190719-utils.mini.js',
+    filename: 'sybUtils.js',
+    // filename: 'sybUtils.mini.js',
     library: 'aUtils', //向外暴露的对象的名称
     libraryTarget: 'umd', //针对esm / commonjs / amd 语法
   }

@@ -9,7 +9,7 @@ export function deepClone1(target) {
 }
 /* 
   2). 面试基础版本
-            解决问题1: 函数属性还没丢失
+            解决问题1: 函数属性丢失
             无法解决: 循环引用,栈内存溢出
 */
 export function deepClone2(target) {

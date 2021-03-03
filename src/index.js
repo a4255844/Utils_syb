@@ -28,3 +28,8 @@ export { default as Stack } from './da/stack'
 export { default as Queue } from './da/queue'
 export { default as PriorityQueue } from './da/priority-queue'
 export { bubbleSort, insertSort } from './da/sort'
+
+export { default as axios } from './axios'
+export { default as PubSub } from './pubsub'
+export { default as eventBus } from './eventBus'
+export { default as Promise } from './promise'

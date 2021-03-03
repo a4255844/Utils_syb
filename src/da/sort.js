@@ -18,6 +18,7 @@ export function bubbleSort(array) {
   }
   return array
 }
+//插入排序
 export function insertSort(array) {
   //假设第一个元素已经排好序
   const len = array.length

@@ -6,10 +6,21 @@
 import { filter } from './declares'
 //两组数组的方法
 export function difference(arr1, arr2) {
+  if (arr1.length === 0) {
+    return []
+  } else if (arr2.length === 0) {
+    return [...arr1]
+  }
+
   return filter(arr1, item => arr2.indexOf(item) === -1)
 }
 //两组以上数组的方法
 export function differences(arr1, ...arrays) {
+  if (arr1.length === 0) {
+    return []
+  } else if (arrays.length === 0) {
+    return [...arr1]
+  }
   return filter(arr1, item => {
     let result = true //上来默认设置为没有该元素
     // arrays.forEach(array => {  //效率过低，forEach无法中断
