@@ -13,9 +13,10 @@ export function deepClone1(target) {
             无法解决: 循环引用,栈内存溢出
 */
 export function deepClone2(target) {
+  //被克隆的目标必须是数组或者对象，不能是函数
   if (target instanceof Array || (target !== null && typeof target === 'object')) {
     const newTarget = target instanceof Array ? [] : {}
-    for (const key in target) {
+    for (const key in target) { //for in 默认会遍历原型对象上的属性
       if (target.hasOwnProperty(key)) {
         newTarget[key] = deepClone2(target[key]) //递归实现深度克隆
       }

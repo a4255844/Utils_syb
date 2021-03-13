@@ -19,10 +19,10 @@ export function clone1(target) {
 }
 //ES5语法
 export function clone2(target) {
-
+  //被克隆的目标必须是数组或者对象，不能是函数
   if (target instanceof Array || (target !== null && typeof target === 'object')) {
     const newTarget = target instanceof Array ? [] : {}
-    for (const key in target) {
+    for (const key in target) { //for in 默认会遍历原型对象上的属性
       if (target.hasOwnProperty(key)) {
         newTarget[key] = target[key];
       }

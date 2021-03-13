@@ -1,6 +1,6 @@
 {
   "name": "syb_utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "前端自定义工具函数库",
   "keywords": [
     "utils",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": "https://github.com/a4255844/190719_Utils_syb",
   "scripts": {
-    "bulid": "webpack --watch",
+    "build": "webpack --watch",
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "atguigu-utils": "^1.2.2",
-    "syb_utils": "^1.0.1"
+    "syb_utils": "^1.0.2"
   }
 }

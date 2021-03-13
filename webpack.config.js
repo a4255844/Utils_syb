@@ -9,8 +9,8 @@ module.exports = {
   // 出口
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'sybUtils.js',
-    // filename: 'sybUtils.mini.js',
+    // filename: 'sybUtils.js',
+    filename: 'sybUtils.mini.js',
     library: 'aUtils', //向外暴露的对象的名称
     libraryTarget: 'umd', //针对esm / commonjs / amd 语法
   }
