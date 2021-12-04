@@ -9,8 +9,7 @@
 </head>
 
 <body>
-  <script src="../../../node_modules/atguigu-utils/dist/atguigu-utils.js"></script>
-  <script src="../../../dist/190719-utils.js"></script>
+  <script src="../../../dist/sybUtils.mini.js"></script>
   <script>
     // 创建优先级队列对象
     var pQueue = new aUtils.PriorityQueue()
@@ -20,13 +19,10 @@
     pQueue.enqueue("cba", 5)
     pQueue.enqueue("nba", 12)
     pQueue.enqueue("mba", 3)
-
-    // 遍历所有的元素
-    var size = pQueue.size()
-    for (var i = 0; i < size; i++) {
-      var item = pQueue.dequeue()
-      console.log(item.data, item.priority)
-    }
+    pQueue.enqueue("mmm", 5)
+    console.log(pQueue);
+    console.log(pQueue.arr);
+    console.log(pQueue.toString());
   </script>
 </body>
 

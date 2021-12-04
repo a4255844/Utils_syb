@@ -12,7 +12,7 @@ eventBus.on = function (eventName, callback) {
 // 2. emit(eventName, data): 分发事件
 eventBus.emit = function (eventName, data) {
   const callbacks = callbackContainer[eventName]  //取出储存回调的数组
-  if (callbacks && callbacks !== 'undefinde') {
+  if (callbacks) {
     callbacks.forEach(callback => {
       setTimeout(() => {  //异步调用函数
         callback(data)
@@ -22,7 +22,7 @@ eventBus.emit = function (eventName, data) {
 }
 // 3. off(eventName): 删除事件, 不传参数则删除所有
 eventBus.off = function (eventName) {
-  if (eventName === undefined) {
+  if (!eventName) {
     callbackContainer = {}
   } else {
     delete callbackContainer[eventName]

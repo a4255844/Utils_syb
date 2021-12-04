@@ -9,16 +9,19 @@
 </head>
 
 <body>
-  <script src="../../../dist/190719-utils.js"></script>
+  <script src="../../../dist/sybUtils.mini.js"></script>
   <script>
     // 创建队列对象
-    var queue = new aUtils.Queue()
+    const queue = new aUtils.Queue()
 
     // 在队列中添加元素
     queue.enqueue("abc")
     queue.enqueue("cba")
     queue.enqueue("nba")
-
+    queue.enqueue("1")
+    queue.enqueue("2")
+    queue.enqueue("3")
+    console.log(queue.arr);
     // 查看一下队列前端元素
     console.log(queue.front()) // abc
 
@@ -30,6 +33,7 @@
     console.log(queue.dequeue()) // abc
     console.log(queue.dequeue()) // cba
     console.log(queue.dequeue()) // nba
+    console.log(queue.toString());
   </script>
 </body>
 

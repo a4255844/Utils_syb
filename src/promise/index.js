@@ -2,7 +2,12 @@ const PENDING = 'pending'
 const RESOLVED = 'resolved'
 const REJECTED = 'rejected'
 
-/* promise 构造函数 */
+/* 
+  promise 构造函数 
+  注意:  此函数并非真实的promise, 未能区分promise的宏任务, 和微任务, 统一使用setTimeout(宏任务)代替
+        代码仅供理解promise的内部实现
+        宏任务与微任务的执行顺序: 在执行每一次宏任务前,会优先判断当前有没有微任务,如果有依次取出执行完毕,才会执行当前宏任务
+*/
 function Promise(excutor) {
   const that = this
   that.status = PENDING

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <script src="../../../dist/190719-utils.js"></script>
+  <script src="../../../dist/sybUtils.mini.js"></script>
   <script>
     const stack = new aUtils.Stack()
 
@@ -24,8 +24,10 @@
     const stack2 = new aUtils.Stack()
     stack2.push('a')
     stack2.push('b')
+    stack2.push('c')
     stack2.pop()
-    console.log(stack, stack2.peek(), stack2.size(), stack2.isEmpty())
+    console.log(stack2, stack2.peek(), stack2.size(), stack2.isEmpty())
+    console.log(stack.toString(), stack2.toString());
   </script>
 </body>
 

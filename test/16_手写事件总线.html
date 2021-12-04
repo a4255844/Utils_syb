@@ -10,7 +10,7 @@
 
 <body>
 
-  <script src="../dist/sybUtils.js"></script>
+  <script src="../dist/sybUtils.mini.js"></script>
   <script>
     const { eventBus } = aUtils
     eventBus.on('add', (data) => {
@@ -23,10 +23,11 @@
       console.log('delete', data)
     })
 
-    eventBus.off('add')
+    // eventBus.off('add')
     // eventBus.off()
 
     eventBus.emit('add', 123)
+    eventBus.emit('add', 456)
     eventBus.emit('add2', 'add2')
     eventBus.emit('delete', 'abc')
 

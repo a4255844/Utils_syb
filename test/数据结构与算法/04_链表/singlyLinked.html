@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>单项链表</title>
+  <script src="../../../dist/sybUtils.mini.js"></script>
+</head>
+
+<body>
+  <script>
+    const singlyLinkedList = new aUtils.SinglyLinkedList()
+    singlyLinkedList.append('aaa')
+    singlyLinkedList.append('bbb')
+    singlyLinkedList.append('ccc')
+    singlyLinkedList.append('ddd')
+    console.log(singlyLinkedList.toString());
+    console.log(singlyLinkedList.size(), '长度');
+    console.log(singlyLinkedList.get(1), '找元素');
+    console.log(singlyLinkedList.indexOf('bbb'), '找下标bbb');
+    console.log(singlyLinkedList.indexOf('ddd'), '找下标ddd');
+    console.log(singlyLinkedList.indexOf('sss'), '找下标sss');
+    singlyLinkedList.insert(0, '111')
+    singlyLinkedList.insert(2, '222')
+    console.log(singlyLinkedList.size());
+    singlyLinkedList.insert(6, '666')
+    console.log(singlyLinkedList.toString());
+    singlyLinkedList.update(0, 'p')
+    singlyLinkedList.update(2, 'o')
+    singlyLinkedList.update(6, 'i')
+    console.log(singlyLinkedList.toString());
+    // singlyLinkedList.update(7, 'i')
+    console.log(singlyLinkedList.removeAt(0));
+    console.log(singlyLinkedList.toString());
+    console.log(singlyLinkedList.removeAt(2));
+    console.log(singlyLinkedList.toString());
+    console.log(singlyLinkedList.removeAt(4));
+    console.log(singlyLinkedList.toString());
+    // console.log(singlyLinkedList.remove('o'));
+    // console.log(singlyLinkedList.remove('aaa'));
+    // console.log(singlyLinkedList.remove('ddd'));
+    console.log(singlyLinkedList.remove('ccc'));
+    console.log(singlyLinkedList.toString());
+    console.log(singlyLinkedList.remove('ccc'));
+    console.log(singlyLinkedList.toString());
+
+  </script>
+</body>
+
+</html>

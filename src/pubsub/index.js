@@ -38,7 +38,7 @@ pubsub.publish = function (msg, data) {
 }
 // 3. publishSync(msgName,data)同步发送消息
 pubsub.publishSync = function (msg, data) {
-  if (callbackContainer[msg] && callbackContainer[msg] !== 'undefined') {
+  if (callbackContainer[msg]) {
     const callbacks = callbackContainer[msg]
     Object.values(callbacks).forEach(callback => {
       callback(msg, data)
@@ -47,7 +47,7 @@ pubsub.publishSync = function (msg, data) {
 }
 // 4. unsubscribe(flag): 根据flag取消订阅 
 pubsub.unsubscribe = function (flag) {
-  if (flag === undefined) {  //未传入flag
+  if (!flag) {  //未传入flag
     callbackContainer = {}
   } else if (typeof flag === 'string' && flag.indexOf('uid_') === 0) { //传入的是token
     Object.values(callbackContainer).forEach(callbacks => {

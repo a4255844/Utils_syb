@@ -20,7 +20,7 @@
         实现: Type的原型对象是否是obj的原型链上的某个对象, 如果是返回tru, 否则返回false
     */
   </script>
-  <script src="../dist/sybUtils.js"></script>
+  <script src="../dist/sybUtils.mini.js"></script>
   <script>
     function Person(name, age) {
       this.name = name
@@ -36,9 +36,10 @@
     console.log(p)
 
     const p2 = aUtils.newInstance(Person, 'Jack', 13)
-    console.log(p2, p2.constructor)
+    console.log(Person.prototype, p2.constructor)
   </script>
   <script>
+    console.log(Object)
     console.log(aUtils.myInstanceOf(p, Object))
     console.log(aUtils.myInstanceOf(p, Person))
     console.log(aUtils.myInstanceOf(aUtils.myInstanceOf, Function))

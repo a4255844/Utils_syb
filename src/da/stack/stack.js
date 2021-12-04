@@ -32,3 +32,12 @@ Stack.prototype.isEmpty = function () {
   if (this.arr.length) return false
   else return true
 }
+//将栈结构的内容用字符串返回 1 2 3
+Stack.prototype.toString = function () {
+  // let result = ''
+  // for(let i = 0; i < this.arr.length; i++) {
+  //   result += this.arr[i] + ' '
+  // }
+  // return result
+ return this.arr.join('')
+}

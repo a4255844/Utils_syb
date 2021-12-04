@@ -55,8 +55,8 @@
 ## 2. 发布到npm仓库
 		1). 前置
         npm配置的中央仓库不能是淘宝镜像
-        npm config set registry https://registry.npmjs.org/
-        npm config set registry http://registry.npm.taobao.org/
+        npm中央仓库:  npm config set registry https://registry.npmjs.org/
+        淘宝镜像: npm config set registry http://registry.npm.taobao.org/
           
     2). 注册npm中央仓库账号
         https://www.npmjs.com/

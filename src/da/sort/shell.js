@@ -8,7 +8,7 @@
      对每个小数组进行分组，分成多个小数组
      每个小数组排序是交替进行
 */
-function shellSort(array) {
+export default function shellSort(array) {
   let len = array.length
   let distance = len
   while (distance > 1) {
@@ -25,5 +25,3 @@ function shellSort(array) {
   }
   return array
 }
-const array = [4, 6, 3, 1, 7, 9, 5, 12, 43]
-console.log(shellSort(array));
